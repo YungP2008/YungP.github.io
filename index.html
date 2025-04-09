@@ -1,764 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>PCLP School</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Tổng Hợp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e2e, #252540);
+            color: rgb(255, 0, 0);
+            text-align: center;
+        }
 
+        .menu {
+            display: flex;
+            justify-content: center;
+            background: #000000;
+            padding: 15px 0;
+        }
 
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        .menu button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            margin: 0 15px;
+            cursor: pointer;
+            padding: 10px;
+            transition: 0.3s;
+        }
 
+        .menu button:hover {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
 
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+        .content {
+            display: none;
+            padding: 20px;
+        }
 
+        .active {
+            display: block;
+        }
 
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-
-  <link href="assets/css/main.css" rel="stylesheet">
-
+        iframe {
+            width: 80%;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.6);
+        }
+    </style>
 </head>
 
-<body class="index-page">
-
-  <header id="header" class="header fixed-top">
-
-    <div class="topbar d-flex align-items-center">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a
-              href="mailto:contact@example.com">phamphu11102008@gmail.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>0768019358</span></i>
-        </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
+<body>
+    <div class="menu">
+        <button onclick="showContent('video')">Bài 1 - Video</button>
+        <button onclick="showContent('maps')">Bài 2 - Google Maps</button>
+        <button onclick="showContent('chat')">Bài 3 - Chat</button>
     </div>
 
-    <div class="branding d-flex align-items-center">
-
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="PCLP.html" class="logo d-flex align-items-center">
-
-          <h1 class="sitename">Day</h1>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i
-                  class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                      class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Menu Con</a></li>
-                    <li><a href="#">Menu Con</a></li>
-                    <li><a href="#">Menu Con</a></li>
-                    <li><a href="#">Menu Con</a></li>
-                    <li><a href="#">Menu Con</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Menu Con</a></li>
-                <li><a href="#">Menu Con</a></li>
-                <li><a href="#">Menu Con</a></li>
-              </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-      </div>
-
+    <div id="video" class="content active">
+        <h1>Bài 1 - Video YouTube</h1>
+        <iframe src="https://www.youtube.com/embed/gkC-HPugDco?si=BXGE6toKhT1p2dta" allowfullscreen></iframe>
     </div>
 
-  </header>
-
-  <main class="main">
-
-
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row justify-content-start">
-          <div class="col-lg-8">
-            <h2>Chào Mừng Đến Trường PCLP</h2>
-            <p>Tri Thức Là Sức Mạnh</p>
-            <a href="#about" class="btn-get-started">Get Started</a>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-
-    <section id="about" class="about section">
-
-
-      <div class="container section-title" data-aos="fade-up">
-        <span>Về Chúng Tôi<br></span>
-        <h2>Về Chúng Tôi<br></h2>
-        <p>Học Nữa Học Mãi</p>
-      </div>
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-            <img src="fpt.jpg" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
-            <h3>Bạn Bè Coi Nhau Là Gia Đình</h3>
-            <p class="fst-italic">
-              Tình bạn chân thành là khi ta luôn bên nhau, dù vui hay buồn, dù xa hay gần.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Bạn tốt là người luôn sẵn sàng giúp đỡ ta trong lúc khó
-                  khăn.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Tình anh em không chỉ là máu mủ, mà còn là sự gắn kết bằng
-                  trái tim.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Bạn bè thực sự là người có thể cười cùng ta khi vui, khóc
-                  cùng ta khi buồn, và không bao giờ bỏ rơi ta.</span></li>
-            </ul>
-
-            </ul>
-            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section id="cards" class="cards section">
-
-      <div class="container">
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="100">
-            <span>01</span>
-            <h4>Học Tập Chăm Chỉ</h4>
-            <p>Kiến thức là chìa khóa mở cánh cửa tương lai, học tập mỗi ngày để phát triển bản thân.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="200">
-            <span>02</span>
-            <h4>Thầy Cô Tận Tâm</h4>
-            <p>Những người thầy, người cô không chỉ dạy kiến thức mà còn dìu dắt ta trên đường đời.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="300">
-            <span>03</span>
-            <h4>Bạn Bè Gắn Kết</h4>
-            <p>Trường học không chỉ là nơi học tập mà còn là nơi xây dựng những tình bạn đẹp.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="400">
-            <span>04</span>
-            <h4>Hoạt Động Ngoại Khóa</h4>
-            <p>Tham gia các hoạt động giúp học sinh phát triển kỹ năng mềm và tinh thần đồng đội.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="500">
-            <span>05</span>
-            <h4>Ước Mơ Và Định Hướng</h4>
-            <p>Trường học giúp học sinh định hướng tương lai, nuôi dưỡng ước mơ và khát vọng.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 card" data-aos="fade-up" data-aos-delay="600">
-            <span>06</span>
-            <h4>Học Hỏi Suốt Đời</h4>
-            <p>Việc học không kết thúc sau khi rời trường, mà là hành trình suốt đời để phát triển bản thân.</p>
-          </div>
-
-    </section>
-
-
-    <section id="clients" class="clients section light-background">
-
-      <div class="container">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section id="services" class="services section">
-
-
-      <div class="container section-title" data-aos="fade-up">
-        <span>Dịch Vụ Nhà Trường</span>
-        <h2>Dịch Vụ Nhà Trường</h2>
-        <p>Chúng tôi cung cấp các dịch vụ hỗ trợ học tập và phát triển toàn diện cho học sinh.</p>
-      </div>
-
-      <div class="container">
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-book"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Thư Viện Hiện Đại</h3>
-              </a>
-              <p>Cung cấp hàng ngàn đầu sách, tài liệu học tập giúp học sinh mở rộng kiến thức và nghiên cứu.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-laptop"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Phòng Máy Tính</h3>
-              </a>
-              <p>Trang bị đầy đủ máy tính và internet giúp học sinh thực hành và học tập hiệu quả.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-dribbble"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Hoạt Động Thể Chất</h3>
-              </a>
-              <p>Các câu lạc bộ thể thao và sân bãi hiện đại giúp học sinh rèn luyện sức khỏe.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-heart-pulse"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Chăm Sóc Sức Khỏe</h3>
-              </a>
-              <p>Phòng y tế luôn sẵn sàng hỗ trợ chăm sóc sức khỏe cho học sinh và giáo viên.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bus-front"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Dịch Vụ Xe Đưa Đón</h3>
-              </a>
-              <p>Xe đưa đón học sinh đảm bảo an toàn và thuận tiện cho việc đi lại mỗi ngày.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-people"></i>
-              </div>
-              <a href="#" class="stretched-link">
-                <h3>Tư Vấn Hướng Nghiệp</h3>
-              </a>
-              <p>Hỗ trợ học sinh lựa chọn ngành nghề và định hướng tương lai phù hợp với năng lực.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-    </section>
-
-
-    <section id="call-to-action" class="call-to-action section dark-background">
-
-      <img src="assets/img/cta-bg.jpg" alt="">
-
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <h3>Hãy Cùng Học Tập Và Phát Triển</h3>
-              <p>Giáo dục là chìa khóa mở ra tương lai. Hãy tham gia cùng chúng tôi để cùng nhau học hỏi, phát triển và
-                chinh phục những ước mơ.</p>
-              <a class="cta-btn" href="#">Tham Gia Ngay</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-
-
-    <section id="facilities" class="portfolio section">
-
-
-      <div class="container section-title" data-aos="fade-up">
-        <span>Cơ sở vật chất</span>
-        <h2>Cơ sở vật chất</h2>
-        <p>Hệ thống phòng học, thư viện, phòng thí nghiệm và sân thể thao hiện đại, phục vụ nhu cầu học tập và nghiên
-          cứu.</p>
-      </div>
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Tất cả</li>
-            <li data-filter=".filter-classroom">Phòng học</li>
-            <li data-filter=".filter-library">Thư viện</li>
-            <li data-filter=".filter-lab">Phòng thí nghiệm</li>
-            <li data-filter=".filter-sport">Khu thể thao</li>
-          </ul>
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-classroom">
-              <img src="phonghoc.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Phòng học hiện đại</h4>
-                <p>Trang bị máy chiếu, điều hòa, bàn ghế tiêu chuẩn.</p>
-                <a href="phonghoc.jpg" title="Phòng học hiện đại" data-gallery="portfolio-gallery-classroom"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-library">
-              <img src="thuvien.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Thư viện rộng rãi</h4>
-                <p>Hàng ngàn đầu sách, không gian yên tĩnh cho học tập.</p>
-                <a href="thuvien.jpg" title="Thư viện" data-gallery="portfolio-gallery-library"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-lab">
-              <img src="thinghiem.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Phòng thí nghiệm</h4>
-                <p>Trang bị đầy đủ thiết bị phục vụ nghiên cứu khoa học.</p>
-                <a href="thinghiem.jpg" title="Phòng thí nghiệm" data-gallery="portfolio-gallery-lab"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-sport">
-              <img src="khuthethao.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Khu thể thao</h4>
-                <p>Sân bóng, nhà thi đấu đa năng cho hoạt động ngoại khóa.</p>
-                <a href="khuthethao.jpg" title="Khu thể thao" data-gallery="portfolio-gallery-sport"
-                  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <section id="pricing" class="pricing section">
-
-
-      <div class="container section-title" data-aos="fade-up">
-        <span>Giá cả</span>
-        <h2>Giá cả</h2>
-        <p>Các gói dịch vụ linh hoạt phù hợp với nhu cầu của bạn.</p>
-      </div>
-
-      <div class="container">
-
-        <div class="row g-4 g-lg-0">
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Gói Cơ Bản</h3>
-              <h4><sup>$</sup>0<span> / tháng</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Truy cập nội dung miễn phí</span></li>
-                <li><i class="bi bi-check"></i> <span>Hỗ trợ qua email</span></li>
-                <li><i class="bi bi-check"></i> <span>Cập nhật định kỳ</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Không có hỗ trợ trực tiếp</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Không có tài nguyên cao cấp</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Đăng ký</a></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 featured" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item">
-              <h3>Gói Tiêu Chuẩn</h3>
-              <h4><sup>$</sup>29<span> / tháng</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Truy cập đầy đủ nội dung</span></li>
-                <li><i class="bi bi-check"></i> <span>Hỗ trợ trực tiếp 24/7</span></li>
-                <li><i class="bi bi-check"></i> <span>Cập nhật nội dung mới hàng tuần</span></li>
-                <li><i class="bi bi-check"></i> <span>Ưu tiên xử lý yêu cầu</span></li>
-                <li><i class="bi bi-check"></i> <span>Giảm giá khi gia hạn</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Đăng ký</a></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Gói Cao Cấp</h3>
-              <h4><sup>$</sup>49<span> / tháng</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Truy cập toàn bộ tài nguyên</span></li>
-                <li><i class="bi bi-check"></i> <span>Hỗ trợ cá nhân hóa</span></li>
-                <li><i class="bi bi-check"></i> <span>Cập nhật nội dung độc quyền</span></li>
-                <li><i class="bi bi-check"></i> <span>Ưu đãi khi nâng cấp gói</span></li>
-                <li><i class="bi bi-check"></i> <span>Hỗ trợ qua video call</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Đăng ký</a></div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section id="team" class="team section">
-
-
-      <div class="container section-title" data-aos="fade-up">
-        <span>Thành viên trong đội</span>
-        <h2>Thành viên trong đội</h2>
-        <p>Những con người tài năng và nhiệt huyết góp phần tạo nên thành công.</p>
-      </div>
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <img src="Phuc.jpg" class="img-fluid" alt="Bùi Bảo Phúc">
-              <div class="member-content">
-                <h4>Bùi Bảo Phúc</h4>
-                <span>Phát triển Web</span>
-                <p>
-                  Chuyên về lập trình front-end và back-end, đam mê công nghệ web hiện đại.
-                </p>
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <img src="nguyen.jpg" class="img-fluid" alt="Hòn Nguyên">
-              <div class="member-content">
-                <h4>Hòn Nguyên</h4>
-                <span>Marketing</span>
-                <p>
-                  Chiến lược gia tiếp thị với kinh nghiệm phong phú về thương hiệu và truyền thông.
-                </p>
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <img src="henry.jpg" class="img-fluid" alt="Hải An">
-              <div class="member-content">
-                <h4>Hải An</h4>
-                <span>Sáng tạo nội dung</span>
-                <p>
-                  Định hướng nội dung sáng tạo, truyền tải thông điệp ý nghĩa đến khách hàng.
-                </p>
-                <div class="social">
-                  <a href="#"><i class="bi bi-twitter-x"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section id="contact" class="contact section">
-
-
-      <div class="container section-title" data-aos="fade-up">
-        <span>Contact</span>
-        <h2>Contact</h2>
-        <p>Liên Hệ</p>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-              data-aos-delay="200">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Địa Chỉ</h3>
-              <p>449 Lê Văn Việt</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-              data-aos-delay="300">
-              <i class="bi bi-telephone"></i>
-              <h3>Gọi Cho Chúng Tôi</h3>
-              <p>0768019359</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-              data-aos-delay="400">
-              <i class="bi bi-envelope"></i>
-              <h3>Email Của Chúng Tôi</h3>
-              <p>phamphu11102008@gmail.com</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row gy-4 mt-1">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1CfSeAraYUxYDCI0MkGtOoUXsZFWRuvE&ehbc=2E312F"
-              frameborder="0" style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="400">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Tin Nhắn Của Bạn Đã Được Gửi. Chúng Tôi Sẽ Trả Lời Sớm Nhất Có Thể</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer id="footer" class="footer position-relative dark-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6">
-          <div class="footer-about">
-            <a href="index.html" class="logo sitename">PCLP</a>
-            <div class="footer-contact pt-3">
-              <p>449 Lê Văn Việt</p>
-              <p>Thành Phố HCM Thủ Đức</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>0768019358</span></p>
-              <p><strong>Email:</strong> <span>phamphu11102008@gmail.com</span></p>
-            </div>
-            <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-twitter-x"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
-
-      </div>
+    <div id="maps" class="content">
+        <h1>Bài 2 - Google Maps</h1>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1CfSeAraYUxYDCI0MkGtOoUXsZFWRuvE&ehbc=2E312F"></iframe>
     </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">PCLP</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+    <div id="chat" class="content">
+        <h1>Bài 3 - Hệ Thống Chat</h1>
+        <script src="https://uhchat.net/code.php?f=0192ae"></script>
     </div>
 
-  </footer>
-
-
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-
-  <div id="preloader"></div>
-
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <script src="assets/js/main.js"></script>
-
+    <script>
+        function showContent(id) {
+            let contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
 </body>
 
 </html>
